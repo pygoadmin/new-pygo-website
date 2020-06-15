@@ -1,0 +1,56 @@
+@import url("https://use.typekit.net/erb6ayl.css");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: liberation-serif, sans-serif;
+  font-weight: lighter;
+}
+
+hr {
+  width: 60%;
+  margin: 0 auto;
+  border-bottom: none;
+  border-top: #878787 solid 1px;
+}
+
+.button {
+  background-color: #fff;
+  border-color: transparent;
+  color: #006b6b;
+  margin-top: 3rem;
+  padding: 1rem 2.8rem;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  cursor: pointer;
+  width: 75px;
+  text-align: center;
+  font-family: open-sans, sans-serif;
+}
+
+.button:hover {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
