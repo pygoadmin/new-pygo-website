@@ -37,6 +37,7 @@ const HeaderWrapper = styled.header`
   top: 0;
   z-index: 5;
   display: block;
+  border-bottom: 1px solid #d8d8d8;
 
   nav {
     margin: 0.5rem 0;
@@ -86,13 +87,32 @@ const HeaderWrapper = styled.header`
       }
 
       li {
+        position: relative;
         font-family: open-sans, sans-serif;
         @media (min-width: 1024px) {
           width: auto;
           list-style-type: none;
           margin: 20px 0;
           margin-left: 5%;
-          /* display: block; */
+        }
+        a {
+          color: #4a4a4a;
+        }
+
+        a::after {
+          content: "";
+          width: 0%;
+          position: absolute;
+          border-bottom: solid 2px #4a4a4a;
+          bottom: -5px;
+          left: 0;
+          transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+      }
+
+      li:hover {
+        a::after {
+          width: 100%;
         }
       }
     }
