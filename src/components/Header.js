@@ -8,21 +8,25 @@ const Header = () => {
       <div className='grid-container'>
         <nav>
           <span className='logo-container'>
-            <AniLink fade to='/'>
-              PYGO Inc.
-            </AniLink>
+            <AniLink to='/'>PYGO Inc.</AniLink>
           </span>
           <button>X</button>
           <ul>
             <li>
-              <AniLink fade to='/products'>
-                Products
-              </AniLink>
+              <AniLink to='/'>Products</AniLink>
             </li>
-            <li>Industries</li>
-            <li>Examples</li>
-            <li>Docs & Tools</li>
-            <li>About</li>
+            <li>
+              <AniLink to='/'> Industries </AniLink>{" "}
+            </li>
+            <li>
+              <AniLink to='/'> Case Studies </AniLink>{" "}
+            </li>
+            <li>
+              <AniLink to='/'> Events </AniLink>{" "}
+            </li>
+            <li>
+              <AniLink to='/'> About </AniLink>{" "}
+            </li>
           </ul>
         </nav>
       </div>
