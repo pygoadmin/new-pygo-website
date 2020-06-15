@@ -1,11 +1,35 @@
 import React from "react";
 import styled from "styled-components";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const Footer = () => {
   return (
     <FooterWrapper>
       <div className='grid-container'>
         <div className='left-section'>
+          <ul className='link-section'>
+            <li>
+              <AniLink to='/'>About PYGO</AniLink>
+            </li>
+            <li>
+              <AniLink to='/'>News</AniLink>
+            </li>
+            <li>
+              <AniLink to='/'>Terms of service</AniLink>
+            </li>
+            <li>
+              <AniLink to='/'>Privacy policy</AniLink>
+            </li>
+            <li>
+              <AniLink to='/'>Case Studies</AniLink>
+            </li>
+            <li>
+              <AniLink to='/'>Contact sales</AniLink>
+            </li>
+            <li>
+              <AniLink to='/'>Legal</AniLink>
+            </li>
+          </ul>
           <h1>PYGO Inc.</h1>
           <p>Copyright 2020. All rights reserved</p>
         </div>
@@ -42,6 +66,31 @@ const FooterWrapper = styled.footer`
       }
       flex-grow: 3;
       padding: 2rem;
+
+      .link-section {
+        margin-bottom: 60px;
+
+        li {
+          position: relative;
+          font-family: open-sans, sans-serif;
+          @media (min-width: 1024px) {
+            width: inherit;
+            list-style-type: none;
+            margin: 20px 0;
+          }
+          a {
+            color: white;
+            border-bottom: solid 2px transparent;
+            transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+          }
+        }
+
+        li:hover {
+          a {
+            border-bottom: solid 2px white;
+          }
+        }
+      }
     }
 
     .form-section {
