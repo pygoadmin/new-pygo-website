@@ -205,6 +205,36 @@ const FooterWrapper = styled.footer`
       }
     }
   }
+
+  @media (max-width: 1024px) {
+    li {
+      list-style-type: none;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  /* tablet */
+  @media (max-width: 768px) {
+    padding: 60px 15px;
+
+    .grid-container {
+      flex-direction: column;
+
+      li {
+        list-style-type: none;
+        margin-bottom: 1rem;
+      }
+
+      .form-section {
+        border-left: none;
+        padding: 1rem;
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
 `;
 
 export default Footer;
