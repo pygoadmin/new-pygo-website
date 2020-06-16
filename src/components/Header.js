@@ -73,6 +73,13 @@ const HeaderWrapper = styled.header`
       transform: scale(1.5);
     }
 
+    @media (max-width: 1260px) {
+      .logo {
+        margin-left: 45px;
+        transform: scale(1.4);
+      }
+    }
+
     button {
       @media (min-width: 1024px) {
         display: none;
