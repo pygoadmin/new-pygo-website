@@ -20,11 +20,9 @@ const Header = () => {
     <HeaderWrapper>
       <div className='grid-container'>
         <nav>
-          <span className='logo-container'>
-            <AniLink to='/'>
-              <img src={pygoIcon} alt='' />
-            </AniLink>
-          </span>
+          <AniLink to='/'>
+            <img src={pygoIcon} className='logo' alt='' />
+          </AniLink>
           <button onClick={openNav}>
             {" "}
             <GiHamburgerMenu />{" "}
@@ -69,17 +67,9 @@ const HeaderWrapper = styled.header`
     text-align: center;
     position: relative;
 
-    .logo-container {
-      display: block;
-      height: 100%;
-      transition: opacity 0.3s linear;
-      font-family: liberation-serif, sans-serif;
-      font-size: 2rem;
-      color: red;
-      margin-left: 1rem;
-      a {
-        color: red;
-      }
+    .logo {
+      width: 120px;
+      transform: translateY(10%);
     }
 
     button {
