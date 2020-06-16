@@ -201,6 +201,13 @@ const MainIntro = styled.section`
     font-weight: light;
   }
 
+  /* tablet */
+  @media (max-width: 768px) {
+    p {
+      padding-left: 2.5rem;
+    }
+  }
+
   .things-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
