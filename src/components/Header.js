@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Header = () => {
   return (
@@ -10,7 +11,10 @@ const Header = () => {
           <span className='logo-container'>
             <AniLink to='/'>PYGO Inc.</AniLink>
           </span>
-          <button>X</button>
+          <button>
+            {" "}
+            <GiHamburgerMenu />{" "}
+          </button>
           <ul>
             <li>
               <AniLink to='/'>Products</AniLink>
@@ -68,12 +72,14 @@ const HeaderWrapper = styled.header`
       @media (min-width: 1024px) {
         display: none;
       }
-      width: 30px;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: -1rem;
-      padding: 1rem;
+      right: 2rem;
+      font-size: 2rem;
+      background: transparent;
+      border-color: transparent;
+      cursor: pointer;
     }
 
     ul {
