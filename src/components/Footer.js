@@ -65,7 +65,7 @@ const Footer = () => {
             </li>
           </ul>
           <h1>PYGO Inc.</h1>
-          <p>Copyright 2020. All rights reserved</p>
+          <p>Copyright © 2020 PYGO Inc. All rights reserved.</p>
         </div>
 
         <Formik

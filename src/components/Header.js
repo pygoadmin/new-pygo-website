@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { GiHamburgerMenu } from "react-icons/gi";
-import pygoIcon from "../images/pygo-icon.webp";
+import pygoIcon from "../images/pygo-clear.png";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -70,6 +70,7 @@ const HeaderWrapper = styled.header`
     .logo {
       width: 120px;
       transform: translateY(10%);
+      transform: scale(1.5);
     }
 
     button {

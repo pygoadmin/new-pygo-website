@@ -61,12 +61,12 @@ export default function Home(props) {
               <img src={OAG} alt='' />
             </div>
             <div className='grid-item'>
-              <h2>Mining {"\n"} Metal</h2>
+              <h2>Mining/Metal</h2>
               <img src={MM} alt='' />
             </div>
             <div className='grid-item'>
-              <h2>Pipeline Midstream Chemical</h2>
-              <img style={{ marginBottom: "10px" }} src={PMC} alt='' />
+              <h2>Pipeline Midstream/Chemical</h2>
+              <img src={PMC} alt='' />
             </div>
             <div className='grid-item'>
               <h2>Renewable Energy</h2>
@@ -77,7 +77,7 @@ export default function Home(props) {
               <img src={MWW} alt='' />
             </div>
             <div className='grid-item'>
-              <h2>Pharmaceutical Food Process</h2>
+              <h2>Pharmaceutical/Food Process</h2>
               <img src={PFP} alt='' />
             </div>
           </div>
@@ -85,8 +85,10 @@ export default function Home(props) {
         </MainIntro>
         <MainSubIntro className='grid-container'>
           <div className='row'>
-            <h2>Flexible enough for startups and large-scale enterprises</h2>
-            <a href=''>See our products</a>
+            <h2>
+              Customized hardware and software for niche industrial use-cases
+            </h2>
+            <a href='/'>See our products</a>
           </div>
           <div className='image-container'>
             <img src={Test} alt='' />
