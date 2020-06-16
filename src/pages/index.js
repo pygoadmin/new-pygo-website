@@ -313,4 +313,18 @@ const MainNews = styled.section`
   hr {
     margin: 60px auto;
   }
+
+  /* tablet */
+  @media (max-width: 768px) {
+    .articles-grid-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      article {
+        width: 80%;
+        margin-bottom: 30px;
+      }
+    }
+  }
 `;
