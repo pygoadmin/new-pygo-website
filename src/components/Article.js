@@ -96,6 +96,10 @@ const ArticleWrapper = styled.article`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    min-height: 40rem;
+  }
 `;
 
 export default Article;
