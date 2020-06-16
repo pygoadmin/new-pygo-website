@@ -156,6 +156,36 @@ const MainHero = styled.section`
     top: 0;
     right: 0;
   }
+
+  /* tablet */
+  @media (max-width: 768px) {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(248, 248, 248);
+    .introduction {
+      top: 0px;
+      max-width: 100%;
+      transform: translateY(0%);
+    }
+    .slideshow {
+      z-index: 4;
+      top: 20rem;
+      left: 0;
+      width: 100%;
+      height: 50%;
+    }
+  }
+
+  /* phone */
+  @media (max-width: 600px) {
+    .introduction {
+      padding: 60px 30px;
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  }
 `;
 
 const MainIntro = styled.section`
