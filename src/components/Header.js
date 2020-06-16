@@ -75,6 +75,7 @@ const HeaderWrapper = styled.header`
 
     @media (max-width: 1260px) {
       .logo {
+        margin-top: 5px;
         margin-left: 45px;
         transform: scale(1.4);
       }
