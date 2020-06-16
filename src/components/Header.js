@@ -77,7 +77,7 @@ const HeaderWrapper = styled.header`
       .logo {
         margin-top: 5px;
         margin-left: 45px;
-        transform: scale(1.4);
+        transform: scale(1.25);
       }
     }
 

@@ -51,7 +51,7 @@ export default function Home(props) {
         </MainHero>
         <MainIntro className='grid-container'>
           <p>
-            PYGO is a leading technology provider enabling Industrical Internet
+            PYGO is a leading technology provider enabling Industrial Internet
             of Things (IIoT) and Edge Intelligence for safe, efficient and
             reliable industrial operations.
           </p>
@@ -203,10 +203,18 @@ const MainIntro = styled.section`
     font-weight: light;
   }
 
-  /* tablet */
-  @media (max-width: 768px) {
+  @media (max-width: 1280px) {
     p {
-      padding-left: 2.5rem;
+      margin-left: 60px;
+    }
+  }
+
+  /* phone */
+  @media (max-width: 600px) {
+    p {
+      margin-left: 30px;
+      line-height: 1.6rem;
+      width: 90%;
     }
   }
 
