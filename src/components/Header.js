@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Header = () => {
+  const [isOpen, setOpen] = useState(false);
+
+  const openNav = () => {
+    setOpen(!isOpen);
+    if (isOpen === false) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
+  };
+
   return (
     <HeaderWrapper>
       <div className='grid-container'>
@@ -11,11 +22,11 @@ const Header = () => {
           <span className='logo-container'>
             <AniLink to='/'>PYGO Inc.</AniLink>
           </span>
-          <button>
+          <button onClick={openNav}>
             {" "}
             <GiHamburgerMenu />{" "}
           </button>
-          <ul>
+          <ul className={isOpen ? "open" : "closed"}>
             <li>
               <AniLink to='/'>Products</AniLink>
             </li>
@@ -83,6 +94,7 @@ const HeaderWrapper = styled.header`
     }
 
     ul {
+      transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
       @media (min-width: 1024px) {
         width: 60%;
         position: absolute;
@@ -121,9 +133,41 @@ const HeaderWrapper = styled.header`
       }
 
       li:hover {
-        a::after {
-          width: 100%;
+        @media (min-width: 1024px) {
+          a::after {
+            width: 100%;
+          }
         }
+      }
+    }
+
+    .open {
+      @media (max-width: 1023px) {
+        position: absolute;
+        top: 55px;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background: white;
+        padding: 30px 60px;
+      }
+      li {
+        list-style-type: none;
+        font-size: 1.3rem;
+        text-align: left;
+        margin: 15px 0;
+      }
+    }
+    .closed {
+      @media (max-width: 1023px) {
+        position: absolute;
+        top: 55px;
+        left: -100vw;
+        height: 100vh;
+        width: 0;
+      }
+      li {
+        opacity: 0;
       }
     }
   }
