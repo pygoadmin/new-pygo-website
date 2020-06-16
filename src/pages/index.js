@@ -280,6 +280,25 @@ const MainSubIntro = styled.section`
       width: 100%;
     }
   }
+
+  /* tablet */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      width: 80%;
+    }
+
+    .image-container {
+      height: 35vh;
+    }
+  }
+
+  /* phone */
+  @media (max-width: 600px) {
+    .image-container {
+      height: 25vh;
+    }
+  }
 `;
 
 const MainNews = styled.section`
