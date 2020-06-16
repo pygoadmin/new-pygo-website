@@ -309,6 +309,12 @@ const MainSubIntro = styled.section`
       height: 25vh;
     }
   }
+
+  @media (max-width: 450px) {
+    .image-container {
+      height: 15vh;
+    }
+  }
 `;
 
 const MainNews = styled.section`

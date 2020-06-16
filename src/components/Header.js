@@ -69,8 +69,8 @@ const HeaderWrapper = styled.header`
 
     .logo {
       width: 120px;
-      transform: translateY(10%);
-      transform: scale(1.5);
+      margin-top: 5px;
+      transform: scale(1.4);
     }
 
     @media (max-width: 1260px) {
@@ -146,7 +146,7 @@ const HeaderWrapper = styled.header`
     .open {
       @media (max-width: 1023px) {
         position: absolute;
-        top: 90px;
+        top: 50px;
         left: 0;
         height: 100vh;
         width: 100vw;
