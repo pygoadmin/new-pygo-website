@@ -94,7 +94,7 @@ export default function Home(props) {
         </MainSubIntro>
         <MainNews className='grid-container'>
           <hr />
-          <h2>News & Announcements</h2>
+          <h2 class='news-title'>News & Announcements</h2>
           <div className='articles-grid-container'>
             {console.log(props.data.test)}
             <Article
@@ -316,6 +316,9 @@ const MainNews = styled.section`
 
   /* tablet */
   @media (max-width: 768px) {
+    .news-title {
+      text-align: center;
+    }
     .articles-grid-container {
       flex-direction: column;
       justify-content: center;
