@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { GiHamburgerMenu } from "react-icons/gi";
+import pygoIcon from "../images/pygo-icon.webp";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -20,7 +21,9 @@ const Header = () => {
       <div className='grid-container'>
         <nav>
           <span className='logo-container'>
-            <AniLink to='/'>PYGO Inc.</AniLink>
+            <AniLink to='/'>
+              <img src={pygoIcon} alt='' />
+            </AniLink>
           </span>
           <button onClick={openNav}>
             {" "}
@@ -144,7 +147,7 @@ const HeaderWrapper = styled.header`
     .open {
       @media (max-width: 1023px) {
         position: absolute;
-        top: 55px;
+        top: 90px;
         left: 0;
         height: 100vh;
         width: 100vw;
@@ -165,9 +168,10 @@ const HeaderWrapper = styled.header`
         left: -100vw;
         height: 100vh;
         width: 0;
-      }
-      li {
-        opacity: 0;
+
+        li {
+          opacity: 0;
+        }
       }
     }
   }
