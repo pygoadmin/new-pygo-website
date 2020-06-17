@@ -7,10 +7,6 @@ import pygoIcon from "../images/pygo-clear.png";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
-  // setOpen(false);
-  const openNav = () => {
-    setOpen(!isOpen);
-  };
 
   useEffect(() => {
     if (isOpen === true) {
@@ -20,39 +16,41 @@ const Header = () => {
     }
   });
 
+  console.log(isOpen);
+
   return (
     <HeaderWrapper>
       <div className='grid-container'>
         <nav>
-          <Link onClick={openNav} to='/'>
+          <Link
+            to='/'
+            onClick={() => {
+              setOpen(false);
+            }}>
             <img src={pygoIcon} className='logo' alt='' />
           </Link>
-          <button onClick={openNav}>
+          <button onClick={() => setOpen(!isOpen)}>
             <GiHamburgerMenu />
           </button>
           <ul className={isOpen ? "open" : "closed"}>
             <li>
-              <Link onClick={openNav} to='/'>
-                Products
-              </Link>
+              <Link to='/'>Products</Link>
             </li>
             <li>
-              <Link onClick={openNav} to='/'>
-                Industries
-              </Link>
+              <Link to='/'>Industries</Link>
             </li>
             <li>
-              <Link onClick={openNav} to='/'>
-                Case Studies
-              </Link>
+              <Link to='/'>Case Studies</Link>
             </li>
             <li>
-              <Link onClick={openNav} to='/'>
-                Events
-              </Link>
+              <Link to='/'>Events</Link>
             </li>
             <li>
-              <Link onClick={openNav} to='/about'>
+              <Link
+                to='/about'
+                onClick={() => {
+                  setOpen(false);
+                }}>
                 About
               </Link>
             </li>
