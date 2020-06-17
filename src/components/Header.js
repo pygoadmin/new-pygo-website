@@ -20,7 +20,7 @@ const Header = () => {
     <HeaderWrapper>
       <div className='grid-container'>
         <nav>
-          <AniLink to='/'>
+          <AniLink fade to='/'>
             <img src={pygoIcon} className='logo' alt='' />
           </AniLink>
           <button onClick={openNav}>
@@ -41,7 +41,10 @@ const Header = () => {
               <AniLink to='/'> Events </AniLink>{" "}
             </li>
             <li>
-              <AniLink to='/'> About </AniLink>{" "}
+              <AniLink fade to='/about'>
+                {" "}
+                About{" "}
+              </AniLink>{" "}
             </li>
           </ul>
         </nav>
