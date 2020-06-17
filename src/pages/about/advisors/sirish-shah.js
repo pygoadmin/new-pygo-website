@@ -28,7 +28,7 @@ const sirish = ({ data }) => {
             <br></br>,
             "The main areas of his research are process and performance monitoring, analysis and rationalization of alarm systems.  He is Emeritus Professor at the University of Alberta, a Fellow of the Canadian Academy of Engineering (FCAE), the Chemical Institute of Canada (FCIC) and the IEEE (FIEEE). He currently holds a visiting appointment with the Digital Monozukuri (manufacturing) Education and Research Centre at Hiroshima University in Japan. Professor Shah has co-authored over 200 refereed journal papers and three books. He has consulted widely for the process industry and control software vendors.",
           ]}
-          linkText='Research Website'
+          linkText='Website'
           outsideLink='http://www.eche.ualberta.ca/~slshah/'></MemberFactory>
       </div>
     </Layout>
