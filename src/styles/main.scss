@@ -13,13 +13,16 @@
   height: 100%;
 }
 
-a {
-  text-decoration: none;
-}
+header,
+footer {
+  a {
+    text-decoration: none;
+  }
 
-a:visited {
-  text-decoration: none;
-  color: #4a4a4a;
+  a:visited {
+    text-decoration: none;
+    color: #4a4a4a;
+  }
 }
 
 h2 {

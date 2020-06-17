@@ -1,50 +1,60 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { Link } from "gatsby";
+// import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { GiHamburgerMenu } from "react-icons/gi";
 import pygoIcon from "../images/pygo-clear.png";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
-
+  // setOpen(false);
   const openNav = () => {
     setOpen(!isOpen);
-    if (isOpen === false) {
+  };
+
+  useEffect(() => {
+    if (isOpen === true) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "scroll";
     }
-  };
+  });
 
   return (
     <HeaderWrapper>
       <div className='grid-container'>
         <nav>
-          <AniLink fade to='/'>
+          <Link onClick={openNav} to='/'>
             <img src={pygoIcon} className='logo' alt='' />
-          </AniLink>
+          </Link>
           <button onClick={openNav}>
-            {" "}
-            <GiHamburgerMenu />{" "}
+            <GiHamburgerMenu />
           </button>
           <ul className={isOpen ? "open" : "closed"}>
             <li>
-              <AniLink to='/'>Products</AniLink>
+              <Link onClick={openNav} to='/'>
+                Products
+              </Link>
             </li>
             <li>
-              <AniLink to='/'> Industries </AniLink>{" "}
+              <Link onClick={openNav} to='/'>
+                Industries
+              </Link>
             </li>
             <li>
-              <AniLink to='/'> Case Studies </AniLink>{" "}
+              <Link onClick={openNav} to='/'>
+                Case Studies
+              </Link>
             </li>
             <li>
-              <AniLink to='/'> Events </AniLink>{" "}
+              <Link onClick={openNav} to='/'>
+                Events
+              </Link>
             </li>
             <li>
-              <AniLink fade to='/about'>
-                {" "}
-                About{" "}
-              </AniLink>{" "}
+              <Link onClick={openNav} to='/about'>
+                About
+              </Link>
             </li>
           </ul>
         </nav>

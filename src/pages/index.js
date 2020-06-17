@@ -98,7 +98,6 @@ export default function Home(props) {
           <hr />
           <h2 class='news-title'>News & Announcements</h2>
           <div className='articles-grid-container'>
-            {console.log(props.data.test)}
             <Article
               articleImage={props.data.test.edges[0].node.childImageSharp.fluid}
               articleDate='June 1, 2020'

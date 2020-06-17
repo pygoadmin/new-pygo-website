@@ -65,6 +65,7 @@ const ArticleWrapper = styled.article`
       flex-grow: 1;
     }
     .content-link {
+      text-decoration: none;
       svg {
         transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
         font-size: 1.7rem;
