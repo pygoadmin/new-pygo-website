@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Link } from "gatsby";
-// import AniLink from "gatsby-plugin-transition-link/AniLink";
+// import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { GiHamburgerMenu } from "react-icons/gi";
 import pygoIcon from "../images/pygo-clear.png";
 
@@ -16,43 +16,33 @@ const Header = () => {
     }
   });
 
-  console.log(isOpen);
-
   return (
     <HeaderWrapper>
       <div className='grid-container'>
         <nav>
-          <Link
-            to='/'
-            onClick={() => {
-              setOpen(false);
-            }}>
+          <AniLink fade to='/'>
             <img src={pygoIcon} className='logo' alt='' />
-          </Link>
+          </AniLink>
           <button onClick={() => setOpen(!isOpen)}>
             <GiHamburgerMenu />
           </button>
           <ul className={isOpen ? "open" : "closed"}>
             <li>
-              <Link to='/'>Products</Link>
+              <AniLink to='/'>Products</AniLink>
             </li>
             <li>
-              <Link to='/'>Industries</Link>
+              <AniLink to='/'>Industries</AniLink>
             </li>
             <li>
-              <Link to='/'>Case Studies</Link>
+              <AniLink to='/'>Case Studies</AniLink>
             </li>
             <li>
-              <Link to='/'>Events</Link>
+              <AniLink to='/'>Events</AniLink>
             </li>
             <li>
-              <Link
-                to='/about'
-                onClick={() => {
-                  setOpen(false);
-                }}>
+              <AniLink fade to='/about'>
                 About
-              </Link>
+              </AniLink>
             </li>
           </ul>
         </nav>

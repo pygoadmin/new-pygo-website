@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../../components/Layout";
-import MemberFactory from "../../components/MemberFactory";
+import Layout from "../../../components/Layout";
+import MemberFactory from "../../../components/MemberFactory";
 import { graphql } from "gatsby";
 
 export const query = graphql`
@@ -21,7 +21,7 @@ const sirish = ({ data }) => {
       <div className='grid-container'>
         <MemberFactory
           image={data.file.childImageSharp.fluid}
-          name='Sirish L. Shah, Ph.D., P.Eng.'
+          name='Sirish L. Shah, Ph.D.'
           bio={[
             "Sirish L. Shah, Ph.D., P.Eng. has been with the University of Alberta since 1978, where he held the NSERC-Matrikon-Suncor-iCORE Senior Industrial Research Chair in Computer Process Control from 2000 to 2012. He is the recipient of the Albright & Wilson Americas Award of the Canadian Society for Chemical Engineering (CSChE) in 1989, the Killam Professor in 2003, the D.G. Fisher Award of the CSChE for significant contributions in the field of systems and control, the ASTECH award in 2011, the 2015-IEEE Transition to Practice award and the 2017 RS Jane award of the CSChE.",
             <br></br>,

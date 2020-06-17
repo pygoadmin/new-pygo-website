@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../../components/Layout";
-import MemberFactory from "../../components/MemberFactory";
+import Layout from "../../../components/Layout";
+import MemberFactory from "../../../components/MemberFactory";
 import { graphql } from "gatsby";
 
 export const query = graphql`

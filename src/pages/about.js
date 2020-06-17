@@ -11,26 +11,26 @@ const about = () => {
         <div className='group-container'>
           <div className='member'>
             <h2 className='name'>Hemi Thaker</h2>
-            <InLink to='/about/hemi'>READ BIO</InLink>
+            <InLink to='/about/advisors/hemi-thaker'>READ BIO</InLink>
           </div>
           <div className='member'>
             <h2 className='name'>Sirish L. Shah, Ph.D., P.Eng.</h2>
-            <InLink to='/about/sirish'>READ BIO</InLink>
+            <InLink to='/about/advisors/sirish-shah'>READ BIO</InLink>
           </div>
         </div>
         <h1>Team</h1>
         <div className='group-container'>
           <div className='member'>
             <h2 className='name'>Sridhar Dasani</h2>
-            <InLink to='/about/sridhar'>READ BIO</InLink>
+            <InLink to='/about/team/sridhar-dasani'>READ BIO</InLink>
           </div>
           <div className='member'>
             <h2 className='name'>Koltin Kosik-Harvey</h2>
-            <InLink to='/about/koltin'>READ BIO</InLink>
+            <InLink to='/about/team/koltin-harvey'>READ BIO</InLink>
           </div>
           <div className='member'>
             <h2 className='name'>John Bitancor</h2>
-            <InLink to='/about/john'>READ BIO</InLink>
+            <InLink to='/about/team/john-bitancor'>READ BIO</InLink>
           </div>
         </div>
       </AboutPage>
