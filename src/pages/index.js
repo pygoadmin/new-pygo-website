@@ -268,6 +268,10 @@ const MainSubIntro = styled.section`
   align-items: center;
   margin: 60px auto;
 
+  a {
+    text-decoration: none;
+  }
+
   .row {
     width: 100%;
     display: flex;

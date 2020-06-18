@@ -22,6 +22,7 @@ const john = ({ data }) => {
         <MemberFactory
           image={data.file.childImageSharp.fluid}
           name='John Bitancor'
+          email='jbitancor@pygo.io'
           position='Software Developer'
           linkText='LinkedIn'
           outsideLink='https://www.linkedin.com/in/john-bitancor-182376157/'></MemberFactory>

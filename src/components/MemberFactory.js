@@ -7,6 +7,7 @@ const MemberFactory = ({
   image,
   name,
   position,
+  email,
   bio,
   linkText,
   outsideLink,
@@ -18,7 +19,8 @@ const MemberFactory = ({
         <Img fluid={image} />
       </div>
       <h1 className='name'>{name}</h1>
-      <h2 className='position'>{position}</h2>
+      <h3 className='position'>{position}</h3>
+      <h3 className='email'>{email}</h3>
       <p>{bio}</p>
       <OutLink linkText={linkText} outsideLink={outsideLink}></OutLink>
     </MemberFactoryWrapper>
@@ -47,6 +49,10 @@ const MemberFactoryWrapper = styled.div`
   }
 
   .position {
+    font-weight: lighter;
+  }
+  .email {
+    font-weight: lighter;
     margin-bottom: 30px;
   }
 
