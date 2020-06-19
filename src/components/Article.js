@@ -31,9 +31,10 @@ const Article = ({
   );
 };
 
-const ArticleWrapper = styled.article`
-  width: 30%;
+const ArticleWrapper = styled.div`
+  min-width: 350px;
   min-height: 50rem;
+  margin-right: 30px;
   display: flex;
   flex-direction: column;
 
