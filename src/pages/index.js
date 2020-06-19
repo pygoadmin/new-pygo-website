@@ -1,8 +1,6 @@
+// packages
 import React from "react";
-import Layout from "../components/Layout";
 import styled from "styled-components";
-
-import { graphql } from "gatsby";
 // things container
 import OAG from "../images/things-container/oil-and-gas.png";
 import MM from "../images/things-container/mining-metal.png";
@@ -14,26 +12,13 @@ import PFP from "../images/things-container/pharmaceutical-food-process.png";
 import Test from "../images/0.jpeg";
 
 // components
-import Article from "../components/Article";
 import MainBackgroundSlider from "../components/MainBackgroundSlider";
 
-export const query = graphql`
-  query {
-    test: allFile(filter: { sourceInstanceName: { eq: "articles" } }) {
-      edges {
-        node {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+// sections
+import News from "../components/sections/News";
+import Layout from "../components/Layout";
 
-export default function Home(props) {
+export default function Home() {
   return (
     <div>
       <Layout>
@@ -94,31 +79,7 @@ export default function Home(props) {
             <img src={Test} alt='' />
           </div>
         </MainSubIntro>
-        <MainNews className='grid-container'>
-          <hr />
-          <h2 class='news-title'>News & Announcements</h2>
-          <div className='articles-grid-container'>
-            <Article
-              articleImage={props.data.test.edges[0].node.childImageSharp.fluid}
-              articleDate='June 1, 2020'
-              articleHeadline='Centimeter-level 3D Positioning Using GNSS RTK'
-              articleContent="A case-study abstract based on the implementation of PYGO's high precision RTK GNSS solution for an oil and gas customer in Canada has been accepted for presenting at Tailings and Mine Waste 2020 Conference, November 2020, Keystone, Colorado. #oilandgasindustry #miningindustry #offshoredrilling #mining #industry40"
-              articleCTA='https://www.linkedin.com/posts/pygo-inc_oilandgasindustry-miningindustry-offshoredrilling-activity-6672898895154180096-Y662'></Article>
-            <Article
-              articleImage={props.data.test.edges[1].node.childImageSharp.fluid}
-              articleDate='June 7, 2020'
-              articleHeadline='LoRaWAN solution'
-              articleContent='End-to-end, on-premise deployment of LoRaWAN solution for low latency, vendor agnostic (no vendor lock-in), long range, low-power, customer-owned data infrastructure using PYGO Micro-services.'
-              articleCTA='https://www.linkedin.com/posts/pygo-inc_smartfactory-offshoredrilling-digitalization-activity-6674460022954708992-DGkS'></Article>
-            <Article
-              articleImage={props.data.test.edges[2].node.childImageSharp.fluid}
-              articleDate='June 10, 2020'
-              articleHeadline='Late Night Tech Demos!'
-              articleContent='Late night tech demos! Our team members Koltin Kosik-Harvey John Bitancor
-              preparing a demo for a mining client. #digitalization #miningindustry #miningequipment #industry40 '
-              articleCTA='https://www.linkedin.com/posts/pygo-inc_digitalization-miningindustry-miningequipment-activity-6676323526183669760-uQ0P'></Article>
-          </div>
-        </MainNews>
+        <News />
       </Layout>
     </div>
   );
@@ -316,37 +277,6 @@ const MainSubIntro = styled.section`
   @media (max-width: 450px) {
     .image-container {
       height: 15vh;
-    }
-  }
-`;
-
-const MainNews = styled.section`
-  .articles-grid-container {
-    margin-top: 30px;
-    margin-bottom: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  hr {
-    margin: 60px auto;
-  }
-
-  /* tablet */
-  @media (max-width: 768px) {
-    .news-title {
-      text-align: center;
-    }
-    .articles-grid-container {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      article {
-        width: 80%;
-        margin-bottom: 30px;
-      }
     }
   }
 `;
