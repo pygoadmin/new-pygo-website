@@ -30,8 +30,8 @@ const News = () => {
       <ScrollContainer className='scroll-container' vertical={false}>
         <Article
           articleImage={data.allFile.edges[3].node.childImageSharp.fluid}
-          articleDate='June 10, 2020'
-          articleHeadline='Late Night Tech Demos!'
+          articleDate='June 18, 2020'
+          articleHeadline='Testing gateway'
           articleContent='We tested our custom designed, use-case specific, multi-protocol wireless sensors for #operationalsafety #OEMS #industry40 for a mining client. With LoRaWAN enabled functionality, we achieved 3.7km, non-LoS range with a Cisco gateway. The laptop runs #pygo microservices that do not require access to internet or cloud. Our team has developed front-end GUI and the network stack to support on-premise deployment for network sensitive clients in oil and gas, mining and manufacturing.'
           articleCTA='https://www.linkedin.com/posts/pygo-inc_operationalsafety-oems-industry40-activity-6679537394137620480-Nzeg'></Article>
         <Article
