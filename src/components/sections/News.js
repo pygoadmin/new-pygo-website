@@ -5,6 +5,8 @@ import { useStaticQuery, graphql } from "gatsby";
 import ScrollContainer from "react-indiana-drag-scroll";
 // components
 import Article from "../Article";
+// icons
+import { AiOutlineRight } from 'react-icons/ai';
 
 const News = () => {
   const data = useStaticQuery(graphql`
@@ -27,7 +29,9 @@ const News = () => {
     <MainNews className='grid-container'>
       <hr />
       <h2 className='news-title'>News & Announcements</h2>
-      <ScrollContainer className='scroll-container' vertical={false}>
+      <div className="parent-scroll-container">
+        <AiOutlineRight className="scroll-right-icon" />
+      <ScrollContainer onScroll={()=>console.log()} className='scroll-container' vertical={false}>
         <Article
           articleImage={data.allFile.edges[3].node.childImageSharp.fluid}
           articleDate='June 10, 2020'
@@ -55,6 +59,7 @@ const News = () => {
           articleContent="A case-study abstract based on the implementation of PYGO's high precision RTK GNSS solution for an oil and gas customer in Canada has been accepted for presenting at Tailings and Mine Waste 2020 Conference, November 2020, Keystone, Colorado. #oilandgasindustry #miningindustry #offshoredrilling #mining #industry40"
           articleCTA='https://www.linkedin.com/posts/pygo-inc_oilandgasindustry-miningindustry-offshoredrilling-activity-6672898895154180096-Y662'></Article>
       </ScrollContainer>
+      </div>
     </MainNews>
   );
 };
@@ -65,6 +70,7 @@ const MainNews = styled.section`
   }
 
   .scroll-container {
+    position:relative;
     display: flex;
     flex: 1;
     overflow: auto;
@@ -77,12 +83,22 @@ const MainNews = styled.section`
   @media (max-width: 768px) {
     .news-title {
       text-align: center;
+      margin-bottom: 30px;
     }
 
     .scroll-container {
       margin-left: auto;
       margin-right: auto;
-      width: 90%;
+      width: 80%;
+    }
+
+    .parent-scroll-container .scroll-right-icon{
+      position: absolute;
+      top: 50%;
+      right: 2%;
+      font-size: 1.5rem;
+      z-index: 4;
+      color: #1f6b68;
     }
   }
 `;
