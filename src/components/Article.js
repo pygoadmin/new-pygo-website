@@ -20,7 +20,7 @@ const Article = ({
         <span className='content-date'>{articleDate}</span>
         <h2 className='content-headline'>{articleHeadline}</h2>
         <p className='content-body'>{articleContent}</p>
-        <a className='content-link' target='_blank' href={articleCTA}>
+        <a className='content-link' target='_blank' rel="noreferrer" href={articleCTA}>
           <button className='content-cta'>
             <BsArrowUpRight />
             Read More

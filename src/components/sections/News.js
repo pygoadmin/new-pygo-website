@@ -6,13 +6,11 @@ import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 // components
 import Article from "../Article";
-// icons
-import { AiOutlineRight } from 'react-icons/ai';
 
 const News = () => {
   const data = useStaticQuery(graphql`
     {
-      allFile(filter: { sourceInstanceName: { eq: "articles" } }) {
+      allFile(filter: { sourceInstanceName: { eq: "articles" } }, sort:{fields: name order: ASC}) {
         edges {
           node {
             childImageSharp {
@@ -46,6 +44,14 @@ const News = () => {
               arrows: false,
             },
           }}>
+          <div className='carousel-item'>
+            <Article
+              articleImage={data.allFile.edges[4].node.childImageSharp.fluid}
+              articleDate='June 20, 2020'
+              articleHeadline='Sensor installation at a major coal mining site in Canada'
+              articleContent='Site installation of PYGO sensors at a major mining company in Western Canada. Pioneering the development of Industry 4.0 solutions for improving the health and safety at an affordable cost #operationalsafety #oems #safety #miningindustry #miningequipment'
+              articleCTA='https://www.linkedin.com/posts/pygo-inc_operationalsafety-oems-safety-activity-6679962327632236544-7xE8'></Article>
+          </div>
           <div className='carousel-item'>
             <Article
               articleImage={data.allFile.edges[3].node.childImageSharp.fluid}
@@ -127,7 +133,13 @@ const MainNews = styled.section`
     }
 
     .BrainhubCarousel__arrows:visited{
-      background-color: red;
+      background-color: white;
+    }
+    .BrainhubCarousel__arrows:hover:enabled{
+      background-color: white;
+      span{
+        border-color: #1f6b68;
+      }
     }
   }
 `;
