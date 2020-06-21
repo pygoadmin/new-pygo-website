@@ -15,6 +15,7 @@
     "upload": "gatsby clean && gatsby build && web_build_upload"
   },
   "dependencies": {
+    "@brainhubeu/react-carousel": "^1.18.10",
     "axios": "^0.19.2",
     "babel-plugin-styled-components": "^1.10.7",
     "formik": "^2.1.4",

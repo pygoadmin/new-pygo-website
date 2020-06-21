@@ -32,11 +32,11 @@ const Article = ({
 };
 
 const ArticleWrapper = styled.div`
-  min-width: 350px;
+height: 100%;
+  /* min-width: 350px;
   min-height: 50rem;
   margin-right: 30px;
-  display: flex;
-  flex-direction: column;
+  margin-left: 30px; */
 
   .article-header {
     background: #878787;
@@ -49,7 +49,7 @@ const ArticleWrapper = styled.div`
   }
 
   .article-content {
-    flex-grow: 1;
+    height: calc(100% - 20rem);
     padding: 2rem;
     display: flex;
     flex-direction: column;
