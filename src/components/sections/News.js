@@ -30,9 +30,8 @@ const News = () => {
       <h2 className='news-title'>News & Announcements</h2>
       <div className='carousel-container'>
         <Carousel
-          centered
-          infinite
           dots
+          infinite
           slidesPerPage={3}
           breakpoints={{
             768: {
@@ -48,7 +47,7 @@ const News = () => {
             <Article
               articleImage={data.allFile.edges[4].node.childImageSharp.fluid}
               articleDate='June 20, 2020'
-              articleHeadline='Sensor installation at a major coal mining site in Canada'
+              articleHeadline='Sensor Installation at a Major Coal Mining Site in Canada'
               articleContent='Site installation of PYGO sensors at a major mining company in Western Canada. Pioneering the development of Industry 4.0 solutions for improving the health and safety at an affordable cost #operationalsafety #oems #safety #miningindustry #miningequipment'
               articleCTA='https://www.linkedin.com/posts/pygo-inc_operationalsafety-oems-safety-activity-6679962327632236544-7xE8'></Article>
           </div>
@@ -107,7 +106,7 @@ const MainNews = styled.section`
 
     .BrainhubCarousel__dots{
       position: absolute;
-      top: -25px;
+      top: -45px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -121,7 +120,7 @@ const MainNews = styled.section`
   @media (max-width: 768px) {
     .news-title {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
     }
 
     .BrainhubCarousel__arrows{
