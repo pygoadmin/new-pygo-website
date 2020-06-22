@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import styled from "styled-components";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import Link from 'gatsby-plugin-transition-link';
 import TextError from "../components/TextError";
 import TextSuccess from "../components/TextSuccess";
 
@@ -43,25 +43,25 @@ const Footer = () => {
         <div className='left-section'>
           <ul className='link-section'>
             <li>
-              <AniLink to='/'>About PYGO</AniLink>
+              <Link to='/'>About PYGO</Link>
             </li>
             <li>
-              <AniLink to='/'>News</AniLink>
+              <Link to='/'>News</Link>
             </li>
             <li>
-              <AniLink to='/'>Terms of service</AniLink>
+              <Link to='/'>Terms of service</Link>
             </li>
             <li>
-              <AniLink to='/'>Privacy policy</AniLink>
+              <Link to='/'>Privacy policy</Link>
             </li>
             <li>
-              <AniLink to='/'>Case Studies</AniLink>
+              <Link to='/'>Case Studies</Link>
             </li>
             <li>
-              <AniLink to='/'>Contact sales</AniLink>
+              <Link to='/'>Contact sales</Link>
             </li>
             <li>
-              <AniLink to='/'>Legal</AniLink>
+              <Link to='/'>Legal</Link>
             </li>
           </ul>
           <h1>PYGO Inc.</h1>

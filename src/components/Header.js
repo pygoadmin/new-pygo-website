@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 // import { Link } from "gatsby";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import Link from 'gatsby-plugin-transition-link';
 import { GiHamburgerMenu } from "react-icons/gi";
 import pygoIcon from "../images/pygo-clear.png";
 
@@ -20,29 +20,29 @@ const Header = () => {
     <HeaderWrapper>
       <div className='grid-container'>
         <nav>
-          <AniLink fade to='/'>
+          <Link fade to='/'>
             <img src={pygoIcon} className='logo' alt='' />
-          </AniLink>
+          </Link>
           <button onClick={() => setOpen(!isOpen)}>
             <GiHamburgerMenu />
           </button>
           <ul className={isOpen ? "open" : "closed"}>
             <li>
-              <AniLink to='/'>Products</AniLink>
+              <Link to='/'>Products</Link>
             </li>
             <li>
-              <AniLink to='/'>Industries</AniLink>
+              <Link to='/'>Industries</Link>
             </li>
             <li>
-              <AniLink to='/'>Case Studies</AniLink>
+              <Link to='/'>Case Studies</Link>
             </li>
             <li>
-              <AniLink to='/'>Events</AniLink>
+              <Link to='/'>Events</Link>
             </li>
             <li>
-              <AniLink fade to='/about'>
+              <Link fade to='/about'>
                 About
-              </AniLink>
+              </Link>
             </li>
           </ul>
         </nav>
