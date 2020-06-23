@@ -59,3 +59,11 @@ hr {
   border: 1px solid white;
   color: white !important;
 }
+
+.notransition{
+  transition: none !important;
+  
+  *{
+    animation: none !important;
+  }
+}

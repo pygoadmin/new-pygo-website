@@ -9,19 +9,25 @@ import { CSSTransition } from "react-transition-group";
 import { TransitionState } from "gatsby-plugin-transition-link";
 
 const Layout = (props) => {
-  const [inProp, setInProp] = useState(false);
+  const [isMobile, setMobile] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth < 1025){
+      setMobile(true)
+    }
+  }, [])
 
+  const [inProp, setInProp] = useState(false);
   useEffect(() => {
     setInProp(true);
   }, []);
 
   return (
-    <StyledLayout>
+    <StyledLayout className={`${isMobile ? "notransition" : ""}`}>
       <Helmet>
         <title>PYGO Inc.</title>
         <link rel='icon' href={icon} />
       </Helmet>
-      
+
       <Header />
       <TransitionState>
         {({mount, transitionStatus}) => {
