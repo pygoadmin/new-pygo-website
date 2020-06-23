@@ -21,6 +21,7 @@ const Layout = (props) => {
         <title>PYGO Inc.</title>
         <link rel='icon' href={icon} />
       </Helmet>
+      
       <Header />
       <TransitionState>
         {({mount, transitionStatus}) => {

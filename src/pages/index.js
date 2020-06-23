@@ -1,6 +1,6 @@
 // packages
-import React, {useState, useEffect} from "react";
-import styled from "styled-components";
+import React, { useState, useEffect } from "react";
+import styled, {keyframes} from "styled-components";
 // things container
 import OAG from "../images/things-container/oil-and-gas.png";
 import MM from "../images/things-container/mining-metal.png";
@@ -10,8 +10,6 @@ import MWW from "../images/things-container/manufacturing-waste-water.png";
 import PFP from "../images/things-container/pharmaceutical-food-process.png";
 
 import Test from "../images/0.jpeg";
-import {CSSTransition} from 'react-transition-group';
-import { TransitionState } from 'gatsby-plugin-transition-link';
 // components
 import MainBackgroundSlider from "../components/MainBackgroundSlider";
 
@@ -24,22 +22,26 @@ export default function Home() {
 
   useEffect(() => {
     setInProp(true);
+
+    return () => {
+      setInProp(false);
+    }
   }, []);
 
   return (
     <div>
       <Layout>
         <MainHero className='grid-container'>
-          <div className='introduction'>
-            <h1>Empowering Legacy Plant Floor, Equipment, and Processes</h1>
-            <p>
-              Enable connectivity, intelligence and machine learning
-              capabilities to every field device
-            </p>
-          </div>
-          <div className='slideshow'>
-            <MainBackgroundSlider />
-          </div>
+            <div className={`introduction ${inProp ? "animate" : ""} `}>
+              <h1 className={`${inProp ? "moto-animate" : ""} `}>Empowering Legacy Plant Floor, Equipment, and Processes</h1>
+              <p>
+                Enable connectivity, intelligence and machine learning
+                capabilities to every field device
+              </p>
+            </div>
+            <div className='slideshow'>
+              <MainBackgroundSlider />
+            </div>
         </MainHero>
         <MainIntro className='grid-container'>
           <p>
@@ -92,12 +94,38 @@ export default function Home() {
   );
 }
 
-const MainHero = styled.section`
+const MainHeroKeyframes = keyframes`
+  from{
+    margin-top: 75px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0px;
+    opacity: 1;
+  }
+`
 
+const MotoKeyframes = keyframes`
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+`
+
+const MainHero = styled.section`
   height: 40rem;
   margin-top: 60px;
   margin-bottom: 60px;
+  
+  .animate{
+    animation: ${MainHeroKeyframes} 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+    animation-fill-mode: forwards;
+  }
+
   .introduction {
+    opacity: 0;
     position: absolute;
     top: 50%;
     transform: translateY(-40%);
@@ -107,7 +135,13 @@ const MainHero = styled.section`
     max-width: 40%;
     padding: 60px;
 
+    .moto-animate{
+      animation: ${MotoKeyframes} 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
+      animation-fill-mode: forwards;
+    }
+
     h1 {
+      opacity: 0;
       font-size: 2.5rem;
       padding-bottom: 1rem;
       color: #4a4a4a;
