@@ -1,5 +1,5 @@
 // packages
-import React from "react";
+import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 // things container
 import OAG from "../images/things-container/oil-and-gas.png";
@@ -10,7 +10,8 @@ import MWW from "../images/things-container/manufacturing-waste-water.png";
 import PFP from "../images/things-container/pharmaceutical-food-process.png";
 
 import Test from "../images/0.jpeg";
-
+import {CSSTransition} from 'react-transition-group';
+import { TransitionState } from 'gatsby-plugin-transition-link';
 // components
 import MainBackgroundSlider from "../components/MainBackgroundSlider";
 
@@ -19,6 +20,12 @@ import News from "../components/sections/News";
 import Layout from "../components/Layout";
 
 export default function Home() {
+  const [inProp, setInProp] = useState(false);
+
+  useEffect(() => {
+    setInProp(true);
+  }, []);
+
   return (
     <div>
       <Layout>
@@ -86,6 +93,7 @@ export default function Home() {
 }
 
 const MainHero = styled.section`
+
   height: 40rem;
   margin-top: 60px;
   margin-bottom: 60px;
