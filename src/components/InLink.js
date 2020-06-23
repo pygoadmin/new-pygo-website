@@ -1,13 +1,18 @@
 import React from "react";
-import { Link } from "gatsby";
 import styled from "styled-components";
-// import { IoIosArrowForward } from "react-icons/io";
+import TransitionLink from "gatsby-plugin-transition-link";
 
 const InLink = ({ children, to }) => {
   return (
     <InLinkWrapper>
-      <Link to={to}>{children}</Link>
-      {/* <IoIosArrowForward /> */}
+      <TransitionLink
+        to={to}
+        exit={{
+          length: 0.5,
+        }}
+        entry={{ delay: 0.25 }}>
+        {children}
+      </TransitionLink>
     </InLinkWrapper>
   );
 };
