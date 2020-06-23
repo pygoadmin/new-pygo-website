@@ -59,9 +59,10 @@ const ArticleWrapper = styled.div`
     }
     .content-body {
       font-family: open-sans, sans-serif;
-      flex-grow: 1;
+      /* flex-grow: 1; */
     }
     .content-link {
+      margin-top: auto;
       text-decoration: none;
       svg {
         transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);

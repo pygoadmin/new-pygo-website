@@ -9,13 +9,19 @@ import Article from "../Article";
 
 const News = () => {
   const data = useStaticQuery(graphql`
+  
     {
-      allFile(filter: { sourceInstanceName: { eq: "articles" } }, sort:{fields: name order: ASC}) {
+      allContentfulLinkedInArticles(sort:{fields: articleDate order:DESC}) {
         edges {
           node {
-            childImageSharp {
+            articleHeadline
+            articleContent {
+              articleContent
+            }
+            articleDate
+            articleImage {
               fluid {
-                ...GatsbyImageSharpFluid
+                src
               }
             }
           }
@@ -43,47 +49,18 @@ const News = () => {
               arrows: false,
             },
           }}>
-          <div className='carousel-item'>
-            <Article
-              articleImage={data.allFile.edges[4].node.childImageSharp.fluid}
-              articleDate='June 20, 2020'
-              articleHeadline='Sensor Installation at a Major Coal Mining Site in Canada'
-              articleContent='Site installation of PYGO sensors at a major mining company in Western Canada. Pioneering the development of Industry 4.0 solutions for improving the health and safety at an affordable cost #operationalsafety #oems #safety #miningindustry #miningequipment'
-              articleCTA='https://www.linkedin.com/posts/pygo-inc_operationalsafety-oems-safety-activity-6679962327632236544-7xE8'></Article>
-          </div>
-          <div className='carousel-item'>
-            <Article
-              articleImage={data.allFile.edges[3].node.childImageSharp.fluid}
-              articleDate='June 18, 2020'
-              articleHeadline='Testing Sensor Range'
-              articleContent='We tested our custom designed, use-case specific, multi-protocol wireless sensors for #operationalsafety #OEMS #industry40 for a mining client. With LoRaWAN enabled functionality, we achieved 3.7km, non-LoS range with a Cisco gateway. The laptop runs #pygo microservices that do not require access to internet or cloud. Our team has developed front-end GUI and the network stack to support on-premise deployment for network sensitive clients in oil and gas, mining and manufacturing.'
-              articleCTA='https://www.linkedin.com/posts/pygo-inc_operationalsafety-oems-industry40-activity-6679537394137620480-Nzeg'></Article>
-          </div>
-          <div className='carousel-item'>
-            <Article
-              articleImage={data.allFile.edges[2].node.childImageSharp.fluid}
-              articleDate='June 10, 2020'
-              articleHeadline='Late Night Tech Demos!'
-              articleContent='Late night tech demos! Our team members Koltin Kosik-Harvey John Bitancor
-              preparing a demo for a mining client. #digitalization #miningindustry #miningequipment #industry40 '
-              articleCTA='https://www.linkedin.com/posts/pygo-inc_digitalization-miningindustry-miningequipment-activity-6676323526183669760-uQ0P'></Article>
-          </div>
-          <div className='carousel-item'>
-            <Article
-              articleImage={data.allFile.edges[1].node.childImageSharp.fluid}
-              articleDate='June 7, 2020'
-              articleHeadline='LoRaWAN solution'
-              articleContent='End-to-end, on-premise deployment of LoRaWAN solution for low latency, vendor agnostic (no vendor lock-in), long range, low-power, customer-owned data infrastructure using PYGO Micro-services.'
-              articleCTA='https://www.linkedin.com/posts/pygo-inc_smartfactory-offshoredrilling-digitalization-activity-6674460022954708992-DGkS'></Article>
-          </div>
-          <div className='carousel-item'>
-            <Article
-              articleImage={data.allFile.edges[0].node.childImageSharp.fluid}
-              articleDate='June 1, 2020'
-              articleHeadline='Centimeter-level 3D Positioning Using GNSS RTK'
-              articleContent="A case-study abstract based on the implementation of PYGO's high precision RTK GNSS solution for an oil and gas customer in Canada has been accepted for presenting at Tailings and Mine Waste 2020 Conference, November 2020, Keystone, Colorado. #oilandgasindustry #miningindustry #offshoredrilling #mining #industry40"
-              articleCTA='https://www.linkedin.com/posts/pygo-inc_oilandgasindustry-miningindustry-offshoredrilling-activity-6672898895154180096-Y662'></Article>
-          </div>
+          {data.allContentfulLinkedInArticles.edges.map((i) => {
+            return (
+              <div key={i.node.id} className='carousel-item'>
+                <Article
+                  articleImage={i.node.articleImage.fluid}
+                  articleDate={i.node.articleDate}
+                  articleHeadline={i.node.articleHeadline}
+                  articleContent={i.node.articleContent.articleContent}
+                  articleCTA={i.node.articleCTA}></Article>
+              </div>
+            );
+          })}
         </Carousel>
       </div>
     </MainNews>
@@ -96,6 +73,7 @@ const MainNews = styled.section`
   }
 
   .carousel-container {
+    margin-bottom: 90px;
     position: relative;
     .carousel-item {
       height: 100%;
@@ -123,20 +101,20 @@ const MainNews = styled.section`
       margin-bottom: 50px;
     }
 
-    .BrainhubCarousel__arrows{
+    .BrainhubCarousel__arrows {
       background-color: white;
 
-      span{
+      span {
         border-color: black;
       }
     }
 
-    .BrainhubCarousel__arrows:visited{
+    .BrainhubCarousel__arrows:visited {
       background-color: white;
     }
-    .BrainhubCarousel__arrows:hover:enabled{
+    .BrainhubCarousel__arrows:hover:enabled {
       background-color: white;
-      span{
+      span {
         border-color: #1f6b68;
       }
     }
