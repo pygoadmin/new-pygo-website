@@ -39,7 +39,7 @@ export default function Home() {
                 capabilities to every field device
               </p>
             </div>
-            <div className={`slideshow ${inProp ? "animate" : ""} `}>
+            <div className={`slideshow ${inProp ? "slideshow-animation" : ""} `}>
               <MainBackgroundSlider />
             </div>
         </MainHero>
@@ -116,12 +116,10 @@ const MotoKeyframes = keyframes`
 
 const SlideShowKeyframes = keyframes`
   from{
-    height: 95%;
-    width: 65%;
+    transform: scale(1.02)
   }
   to{
-    height: 100%;
-    width: 70%;
+    transform: scale(1)
   }
 `
 
@@ -136,7 +134,6 @@ const MainHero = styled.section`
   }
 
   .introduction {
-    /* opacity: 0; */
     position: absolute;
     top: 50%;
     transform: translateY(-40%);
@@ -152,7 +149,6 @@ const MainHero = styled.section`
     }
 
     h1 {
-      /* opacity: 0; */
       font-size: 2.5rem;
       padding-bottom: 1rem;
       color: #4a4a4a;
@@ -170,6 +166,11 @@ const MainHero = styled.section`
     position: absolute;
     top: 0;
     right: 0;
+  }
+
+  .slideshow.slideshow-animation{
+    animation: ${SlideShowKeyframes} 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
+    animation-fill-mode: backwards;
   }
 
   /* tablet */
