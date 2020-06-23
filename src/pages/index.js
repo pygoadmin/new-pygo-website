@@ -95,31 +95,33 @@ export default function Home() {
 }
 
 const MainHeroKeyframes = keyframes`
-  from{
-    margin-top: 75px;
+  0%{
+    transform: translateY(-20%);
     opacity: 0;
   }
-  to {
-    margin-top: 0px;
+  100% {
+    transform: translateY(-40%);
     opacity: 1;
   }
 `
 
 const MotoKeyframes = keyframes`
   from{
+    transform: translateY(10%);
     opacity: 0;
   }
   to{
     opacity: 1;
+    transform: translateY(0%);
   }
 `
 
 const SlideShowKeyframes = keyframes`
   from{
-    transform: scale(1.02)
+    opacity: 0;
   }
   to{
-    transform: scale(1)
+    opacity: 1;
   }
 `
 
@@ -129,7 +131,7 @@ const MainHero = styled.section`
   margin-bottom: 60px;
   
   .animate{
-    animation: ${MainHeroKeyframes} 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+    animation: ${MainHeroKeyframes} 0.4s ease-out;
     animation-fill-mode: backwards;
   }
 
@@ -144,7 +146,7 @@ const MainHero = styled.section`
     padding: 60px;
 
     .moto-animate{
-      animation: ${MotoKeyframes} 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
+      animation: ${MotoKeyframes} 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
       animation-fill-mode: backwards;
     }
 
@@ -169,7 +171,7 @@ const MainHero = styled.section`
   }
 
   .slideshow.slideshow-animation{
-    animation: ${SlideShowKeyframes} 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
+    animation: ${SlideShowKeyframes} 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
     animation-fill-mode: backwards;
   }
 

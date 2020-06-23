@@ -14,8 +14,8 @@ const MainBackgroundSlider = () => {
               nodes {
                 relativePath
                 childImageSharp {
-                  fluid(maxWidth: 4000, quality: 100) {
-                    ...GatsbyImageSharpFluid
+                  fluid(maxWidth: 800, quality: 80) {
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
                   }
                 }
               }

@@ -26,7 +26,7 @@ const Header = () => {
             exit={{
               length: 0.5
             }}
-            entry={{ length: 0.5, delay: 0.25 }}>
+            entry={{ delay: 0.25}}>
             <img src={pygoIcon} className='logo' alt='' />  
           </TransitionLink>
           <button onClick={() => setOpen(!isOpen)}>
@@ -49,7 +49,7 @@ const Header = () => {
               <TransitionLink
                 to='/about'
                 exit={{ length: 0.5 }}
-                entry={{ length: 0.5, delay: 0.45 }}>
+                entry={{  delay: 0.25 }}>
                 About
               </TransitionLink>
             </li>
