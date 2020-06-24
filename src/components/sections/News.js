@@ -100,7 +100,6 @@ const MainNews = styled.section`
       text-align: center;
       margin-bottom: 50px;
     }
-
     .BrainhubCarousel__arrows {
       background-color: white;
 
@@ -117,6 +116,16 @@ const MainNews = styled.section`
       span {
         border-color: #1f6b68;
       }
+    }
+  }
+
+  /* phone */
+  @media (max-width: 450px){
+    .article-header{
+      transform: scale(0.8)
+    }
+    .article-content{
+      border: none;
     }
   }
 `;
