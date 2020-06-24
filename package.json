@@ -12,7 +12,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "upload": "gatsby clean && gatsby build && web_build_upload"
+    // "upload": "gatsby clean && gatsby build && web_build_upload"
   },
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.18.10",
