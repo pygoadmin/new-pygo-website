@@ -132,7 +132,7 @@ const MainHero = styled.section`
   
   .animate{
     animation: ${MainHeroKeyframes} 0.4s ease-out;
-    animation-fill-mode: backwards;
+    animation-fill-mode: forwards;
   }
 
   .introduction {
@@ -147,7 +147,7 @@ const MainHero = styled.section`
 
     .moto-animate{
       animation: ${MotoKeyframes} 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
-      animation-fill-mode: backwards;
+      animation-fill-mode: forwards;
     }
 
     h1 {
@@ -172,7 +172,7 @@ const MainHero = styled.section`
 
   .slideshow.slideshow-animation{
     animation: ${SlideShowKeyframes} 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
-    animation-fill-mode: backwards;
+    animation-fill-mode: forwards;
   }
 
   /* tablet */
