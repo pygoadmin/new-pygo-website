@@ -136,6 +136,7 @@ const MainHero = styled.section`
   }
 
   .introduction {
+    opacity: 0;
     position: absolute;
     top: 50%;
     transform: translateY(-40%);
