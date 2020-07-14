@@ -24,6 +24,7 @@ const News = () => {
                 src
               }
             }
+            articleCta
           }
         }
       }
@@ -57,7 +58,7 @@ const News = () => {
                   articleDate={i.node.articleDate}
                   articleHeadline={i.node.articleHeadline}
                   articleContent={i.node.articleContent.articleContent}
-                  articleCTA={i.node.articleCTA}></Article>
+                  articleCTA={i.node.articleCta}></Article>
               </div>
             );
           })}
