@@ -1,6 +1,6 @@
 // packages
 import React, { useState, useEffect } from "react";
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 // things container
 import OAG from "../images/things-container/oil-and-gas.png";
 import MM from "../images/things-container/mining-metal.png";
@@ -25,67 +25,69 @@ export default function Home() {
 
     return () => {
       setInProp(false);
-    }
+    };
   }, []);
 
   return (
     <div>
       <Layout>
-        <MainHero className='grid-container'>
-            <div className={`introduction ${inProp ? "animate" : ""} `}>
-              <h1 className={`${inProp ? "moto-animate" : ""} `}>Empowering Legacy Plant Floor, Equipment, and Processes</h1>
-              <p>
-                Enable connectivity, intelligence and machine learning
-                capabilities to every field device
-              </p>
-            </div>
-            <div className={`slideshow ${inProp ? "slideshow-animation" : ""} `}>
-              <MainBackgroundSlider />
-            </div>
+        <MainHero className="grid-container">
+          <div className={`introduction ${inProp ? "animate" : ""} `}>
+            <h1 className={`${inProp ? "moto-animate" : ""} `}>
+              Empowering Legacy Plant Floor, Equipment, and Processes
+            </h1>
+            <p>
+              Enable connectivity, intelligence and machine learning
+              capabilities to every field device
+            </p>
+          </div>
+          <div className={`slideshow ${inProp ? "slideshow-animation" : ""} `}>
+            <MainBackgroundSlider />
+          </div>
         </MainHero>
-        <MainIntro className='grid-container'>
+        <MainIntro className="grid-container">
           <p>
             PYGO is a leading technology provider enabling Industrial Internet
             of Things (IIoT) and Edge Intelligence for safe, efficient and
             reliable industrial operations.
           </p>
-          <div className='things-container'>
-            <div className='grid-item'>
+          <div className="things-container">
+            <div className="grid-item">
               <h2>Oil and Gas</h2>
-              <img src={OAG} alt='' />
+              <img src={OAG} alt="" />
             </div>
-            <div className='grid-item'>
+            <div className="grid-item">
               <h2>Mining/Metal</h2>
-              <img src={MM} alt='' />
+              <img src={MM} alt="" />
             </div>
-            <div className='grid-item'>
+            <div className="grid-item">
               <h2>Pipeline Midstream/Chemical</h2>
-              <img src={PMC} alt='' />
+              <img src={PMC} alt="" />
             </div>
-            <div className='grid-item'>
+            <div className="grid-item">
               <h2>Renewable Energy</h2>
-              <img src={RE} alt='' />
+              <img src={RE} alt="" />
             </div>
-            <div className='grid-item'>
+            <div className="grid-item">
               <h2>Manufacturing Waste/Water</h2>
-              <img src={MWW} alt='' />
+              <img src={MWW} alt="" />
             </div>
-            <div className='grid-item'>
+            <div className="grid-item">
               <h2>Pharmaceutical/Food Process</h2>
-              <img src={PFP} alt='' />
+              <img src={PFP} alt="" />
             </div>
           </div>
           <hr />
         </MainIntro>
-        <MainSubIntro className='grid-container'>
-          <div className='row'>
+        <MainSubIntro className="grid-container">
+          <div className="row">
             <h2>
               Customized hardware and software for niche industrial use-cases
             </h2>
-            <a href='/'>See our products</a>
+            <a href="/">See our products</a>
           </div>
-          <div className='image-container'>
-            <img src={Test} alt='' />
+          <div className="image-container">
+            <img src={Test} alt="" />
           </div>
         </MainSubIntro>
         <News />
@@ -103,7 +105,7 @@ const MainHeroKeyframes = keyframes`
     transform: translateY(-40%);
     opacity: 1;
   }
-`
+`;
 
 const MotoKeyframes = keyframes`
   from{
@@ -114,7 +116,7 @@ const MotoKeyframes = keyframes`
     opacity: 1;
     transform: translateY(0%);
   }
-`
+`;
 
 const SlideShowKeyframes = keyframes`
   from{
@@ -123,14 +125,14 @@ const SlideShowKeyframes = keyframes`
   to{
     opacity: 1;
   }
-`
+`;
 
 const MainHero = styled.section`
   height: 40rem;
   margin-top: 60px;
   margin-bottom: 60px;
-  
-  .animate{
+
+  .animate {
     animation: ${MainHeroKeyframes} 0.4s ease-out;
     animation-fill-mode: forwards;
   }
@@ -146,7 +148,7 @@ const MainHero = styled.section`
     max-width: 40%;
     padding: 60px;
 
-    .moto-animate{
+    .moto-animate {
       animation: ${MotoKeyframes} 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
       animation-fill-mode: forwards;
     }
@@ -171,8 +173,9 @@ const MainHero = styled.section`
     right: 0;
   }
 
-  .slideshow.slideshow-animation{
-    animation: ${SlideShowKeyframes} 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+  .slideshow.slideshow-animation {
+    animation: ${SlideShowKeyframes} 0.5s cubic-bezier(0.215, 0.61, 0.355, 1)
+      0.2s;
     animation-fill-mode: forwards;
   }
 
@@ -199,6 +202,7 @@ const MainHero = styled.section`
   /* phone */
   @media (max-width: 600px) {
     .introduction {
+      opacity: 1;
       padding: 60px 30px;
       h1 {
         font-size: 1.5rem;
