@@ -77,7 +77,7 @@ const MainNews = styled.section`
     margin-bottom: 90px;
     position: relative;
     .carousel-item {
-      height: 100%;
+      height: 98%;
       min-width: 350px;
       margin-right: 30px;
       margin-left: 30px;
