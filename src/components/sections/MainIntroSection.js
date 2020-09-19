@@ -189,8 +189,12 @@ const MainHero = styled.section`
       opacity: 1;
       padding: 60px 30px;
       h1 {
+        opacity: 1;
         font-size: 1.5rem;
       }
+    }
+    .slideshow{
+      opacity: 1;
     }
   }
 `;
