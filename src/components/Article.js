@@ -33,6 +33,7 @@ const Article = ({
 
 const ArticleWrapper = styled.div`
   height: 100%;
+  border: 1px solid #d8d8d8;
 
   .article-header {
     background: #878787;
@@ -50,8 +51,7 @@ const ArticleWrapper = styled.div`
     display: flex;
     flex-direction: column;
 
-    border: 1px solid #d8d8d8;
-    border-top: none;
+    border-top: 1px solid #d8d8d8;
     .content-headline {
       margin-top: 2.5rem;
       margin-bottom: 0.4rem;
