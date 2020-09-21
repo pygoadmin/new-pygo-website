@@ -35,6 +35,14 @@ const ArticleWrapper = styled.div`
   height: 100%;
   border: 1px solid #d8d8d8;
 
+  @media (max-width: 450px) {
+    border: none;
+  }
+
+  @media (max-width: 768px) {
+    min-height: 40rem;
+  }
+
   .article-header {
     background: #878787;
     height: 15rem;
@@ -96,9 +104,6 @@ const ArticleWrapper = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
-    min-height: 40rem;
-  }
 `;
 
 export default Article;
