@@ -1,0 +1,20 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(120%);
+    }
+    to {
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+
+.fade-in{
+    opacity: 0;
+    animation: fadeIn 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+    animation-fill-mode: forwards;
+
+    @media (max-width: 1025px) {
+        opacity: 1;
+    }
+}

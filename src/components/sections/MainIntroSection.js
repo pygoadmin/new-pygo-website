@@ -12,71 +12,77 @@ import PFP from "../../images/things-container/pharmaceutical-food-process.png";
 import Test from "../../images/0.jpeg";
 // components
 import MainBackgroundSlider from "../../components/MainBackgroundSlider";
+// styles
+import "../../styles/animations.scss"
 
 const MainIntroSection = ({ inProp }) => {
-    return (
-        <div>
-            <MainHero className="grid-container">
-                <div className={`introduction ${inProp ? "animate" : ""} `}>
-                    <h1 className={`${inProp ? "moto-animate" : ""} `}>
-                        Empowering Legacy Plant Floor, Equipment, and Processes
+  return (
+    <div>
+
+      <MainHero className="grid-container">
+        <div className={`introduction ${inProp ? "animate" : ""} `}>
+          <h1 className={`${inProp ? "moto-animate" : ""} `}>
+            Empowering Legacy Plant Floor, Equipment, and Processes
             </h1>
-                    <p>
-                        Enable connectivity, intelligence and machine learning
-                        capabilities to every field device
+          <p className={`${inProp ? "moto-animate" : ""} `}>
+            Enable connectivity, intelligence and machine learning
+            capabilities to every field device
             </p>
-                </div>
-                <div className={`slideshow ${inProp ? "slideshow-animation" : ""} `}>
-                    <MainBackgroundSlider />
-                </div>
-            </MainHero>
-            <MainIntro className="grid-container">
-                <p>
-                    PYGO is a leading technology provider enabling Industrial Internet
-                    of Things (IIoT) and Edge Intelligence for safe, efficient and
-                    reliable industrial operations.
-          </p>
-                <div className="things-container">
-                    <div className="grid-item">
-                        <h2>Oil and Gas</h2>
-                        <img src={OAG} alt="" />
-                    </div>
-                    <div className="grid-item">
-                        <h2>Mining/Metal</h2>
-                        <img src={MM} alt="" />
-                    </div>
-                    <div className="grid-item">
-                        <h2>Pipeline Midstream/Chemical</h2>
-                        <img src={PMC} alt="" />
-                    </div>
-                    <div className="grid-item">
-                        <h2>Renewable Energy</h2>
-                        <img src={RE} alt="" />
-                    </div>
-                    <div className="grid-item">
-                        <h2>Manufacturing Waste/Water</h2>
-                        <img src={MWW} alt="" />
-                    </div>
-                    <div className="grid-item">
-                        <h2>Pharmaceutical/Food Process</h2>
-                        <img src={PFP} alt="" />
-                    </div>
-                </div>
-                <hr />
-            </MainIntro>
-            <MainSubIntro className="grid-container">
-                <div className="row">
-                    <h2>
-                        Customized hardware and software for niche industrial use-cases
-            </h2>
-                    <a href="/">See our products</a>
-                </div>
-                <div className="image-container">
-                    <img src={Test} alt="" />
-                </div>
-            </MainSubIntro>
         </div>
-    )
+        <div className={`slideshow ${inProp ? "slideshow-animation" : ""} `}>
+          <MainBackgroundSlider />
+        </div>
+      </MainHero>
+
+      <MainIntro className="grid-container">
+        <p>
+          PYGO is a leading technology provider enabling Industrial Internet
+          of Things (IIoT) and Edge Intelligence for safe, efficient and
+          reliable industrial operations.
+          </p>
+        <div className="things-container">
+          <div className="grid-item" >
+            <h2>Oil and Gas</h2>
+            <img src={OAG} className={`${inProp ? "fade-in" : ""}`} alt="" />
+          </div>
+          <div className="grid-item">
+            <h2>Mining/Metal</h2>
+            <img src={MM} className={`${inProp ? "fade-in" : ""}`} alt="" />
+          </div>
+          <div className="grid-item">
+            <h2>Pipeline Midstream/Chemical</h2>
+            <img src={PMC} className={`${inProp ? "fade-in" : ""}`} alt="" />
+          </div>
+          <div className="grid-item">
+            <h2>Renewable Energy</h2>
+            <img src={RE} className={`${inProp ? "fade-in" : ""}`} alt="" />
+          </div>
+          <div className="grid-item">
+            <h2>Manufacturing Waste/Water</h2>
+            <img src={MWW} className={`${inProp ? "fade-in" : ""}`} alt="" />
+          </div>
+          <div className="grid-item">
+            <h2>Pharmaceutical/Food Process</h2>
+            <img src={PFP} className={`${inProp ? "fade-in" : ""}`} alt="" />
+          </div>
+        </div>
+        <hr />
+      </MainIntro>
+
+      <MainSubIntro className="grid-container">
+        <div className="row">
+          <h2>
+            Customized hardware and software for niche industrial use-cases
+            </h2>
+          <a href="/">See our products</a>
+        </div>
+        <div className="image-container">
+          <img src={Test} alt="" />
+        </div>
+      </MainSubIntro>
+
+    </div>
+  )
 }
 
 const MainHeroKeyframes = keyframes`
@@ -146,6 +152,7 @@ const MainHero = styled.section`
       font-size: 1.2rem;
       color: #878787;
       font-family: open-sans, sans-serif;
+      opacity: 0;
     }
   }
   .slideshow {
@@ -191,6 +198,9 @@ const MainHero = styled.section`
       h1 {
         opacity: 1;
         font-size: 1.5rem;
+      }
+      p {
+        opacity: 1;
       }
     }
     .slideshow{
