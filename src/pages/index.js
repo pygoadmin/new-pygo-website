@@ -1,10 +1,13 @@
 // packages
 import React, { useState, useEffect } from "react";
+import { isIE } from 'react-device-detect';
 
 // sections
 import Layout from "../components/Layout";
 import MainIntroSection from "../components/sections/MainIntroSection";
 import News from "../components/sections/News";
+// IE page
+import IEindex from "./ie/ieindex";
 
 export default function Home() {
   const [inProp, setInProp] = useState(false);
@@ -17,13 +20,18 @@ export default function Home() {
     };
   }, []);
 
-  return (
-    <div>
-      <Layout>
-        <MainIntroSection inProp={inProp} />
-        <News />
-      </Layout>
-    </div>
-  );
+  if (isIE) {
+    return <IEindex></IEindex>
+  } else {
+    return (
+      <div>
+        <Layout>
+          <MainIntroSection inProp={inProp} />
+          <News />
+        </Layout>
+      </div>
+    );
+  }
+
 }
 
