@@ -1,4 +1,5 @@
 @import url("https://use.typekit.net/erb6ayl.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
 * {
   margin: 0;
@@ -25,9 +26,13 @@ footer {
   }
 }
 
+h1{
+  font-family: 'Noto Serif', serif;
+}
+
 h2 {
   font-size: 2rem;
-  font-family: liberation-serif, sans-serif;
+  font-family: liberation-serif, serif;
   font-weight: lighter;
 }
 
