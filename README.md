@@ -1,3 +1,3 @@
-###DEPRECATED
+### DEPRECATED
 
-This repository is deprecated. Please refer to -> [text link](https://bitbucket.org/pygo-dev/pygo0101-website/)
+This repository is deprecated. Please refer to the new repository at [Bitbucket](https://bitbucket.org/pygo-dev/pygo0101-website/)
